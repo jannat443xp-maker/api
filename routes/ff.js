@@ -5,7 +5,7 @@ const { checkUID } = require("../services/ffService");
 // ── GET /api/ff/check?uid=534049908 ─────────────────────────────────────────
 router.get("/check", async (req, res) => {
   const uid = req.query.uid;
-  const region = req.query.region || "sg"; // Default to Singapore
+  const region = req.query.region || "bd"; // Default to Bangladesh
 
   if (!uid || !/^\d+$/.test(uid)) {
     return res.status(400).json({

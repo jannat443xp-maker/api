@@ -6,9 +6,9 @@ const HL_API_URL = "https://proapis.hlgamingofficial.com/main/games/freefire/acc
 /**
  * Fetch detailed Free Fire player info using the HL Gaming Official API.
  * @param {string} uid
- * @param {string} region Defaults to 'sg'
+ * @param {string} region Defaults to 'bd'
  */
-async function checkUID(uid, region = "sg") {
+async function checkUID(uid, region = "bd") {
   try {
     console.log(`[ffService] Checking UID ${uid} via HL Gaming API...`);
 
