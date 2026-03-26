@@ -62,7 +62,7 @@ async function checkUID(uid, region = "bd") {
         petInfo: petInfo,
         socialinfo: socialInfo
       },
-      source: "HL Gaming Official",
+      source: "ihntopup.shop",
       usage: data.usage || {}
     };
   } catch (err) {

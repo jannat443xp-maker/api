@@ -30,7 +30,7 @@ app.use("/api/ff", ffRouter);
 // Root info
 app.get("/", (req, res) => {
   res.json({
-    name: "Free Fire UID Checker API",
+    name: "ihntopup.shop API",
     version: "1.0.0",
     endpoints: {
       check: "GET /api/ff/check?uid=YOUR_UID",
