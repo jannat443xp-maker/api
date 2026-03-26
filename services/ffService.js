@@ -10,7 +10,16 @@ const HL_API_URL = "https://proapis.hlgamingofficial.com/main/games/freefire/acc
  */
 async function checkUID(uid, region = "bd") {
   try {
-    console.log(`[ffService] Checking UID ${uid} via HL Gaming API...`);
+    console.log(`[ffService] Checking UID ${uid} (${region}) via HL Gaming API...`);
+
+    if (!process.env.HL_USER_UID || !process.env.HL_API_KEY) {
+      console.error("[ffService] Missing HL Gaming credentials in .env or Vercel Settings.");
+      return { 
+        success: false, 
+        status: 500, 
+        error: "Server configuration missing HL Gaming credentials." 
+      };
+    }
 
     const response = await axios.get(HL_API_URL, {
       params: {
